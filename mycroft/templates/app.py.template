@@ -1,0 +1,15 @@
+import mycroft
+
+class $CLASSNAME(mycroft.App):
+
+    @mycroft.on('APP_MANIFEST_OK')
+    def manifest_ok(self, body):
+        self.up()
+
+
+if __name__ == '__main__':
+    app = $CLASSNAME()
+    app.start(
+        'manifest.json',
+        '$NAME'
+    )
